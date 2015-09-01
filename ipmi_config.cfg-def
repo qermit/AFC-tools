@@ -1,0 +1,11 @@
+#!/bin/sh
+
+
+IPMI_HOST="localhost"
+IPMI_USER="user"
+IPMI_PASSWORD="pass"
+
+IPMB_ADDR="0x76"
+
+IPMI_CMD="ipmitool -I lan -H ${IPMI_HOST} -U ${IPMI_USER} -P ${IPMI_PASSWORD} -B 0 -T 0x82 -m 0x20 -t ${IPMB_ADDR} -b 7 raw"
+
